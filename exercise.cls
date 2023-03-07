@@ -212,19 +212,19 @@
       \@students@pdf{}, #2}}%
   \hypersetup{pdfauthor={\@students@pdf}}%
   \ohead{\itshape \@students@value}}
-  
+
 \newcommand{\settitle}[2][\@sheettext] {%
   \hypersetup{pdftitle={#2},pdfsubject={#1}}%
   \chead{\large~\\\vskip-0.9em\textbf{#2}\\\vskip0.1em \textcolor{maincolor}{#1}}}
 
 \RequirePackage{zref-totpages}
 \ofoot{%
-  \ifnum\ztotpages>1% We know the total number of pages and it is more than one --> page numbers! 
+  \ifnum\ztotpages>1% We know the total number of pages and it is more than one --> page numbers!
     \raisebox{3pt}{\arabic{page}}{\LARGE/}\raisebox{-3pt}{\ztotpages}%
   \else%
     \ifnum\ztotpages=1% There is only one page in total --> no page numbers!
       %
-    \else% 
+    \else%
       \arabic{page}% We do not know the total number of pages yet --> recompile needed
     \fi%
   \fi%
@@ -300,7 +300,7 @@
   \setvarenum\begin{enumerate}}{\end{enumerate}}
 \newenvironment{varcompactenum}{%
   \setvarenum\begin{compactenum}}{\end{compactenum}}
-  
+
 % redefine existing list environments to color every item in the maincolor
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
 \newcommand{\@oldenumerate}{}
@@ -336,6 +336,11 @@
 
 % nice tick
 \newcommand{\tick}{\checkmark}
+
+% optional checkmark and x mark
+\RequirePackage{pifont}
+\providecommand{\cmark}{\ding{51}}
+\providecommand{\xmark}{\ding{55}}
 
 % often used sets
 \newcommand{\set}[1]{\mathbb{#1}}
