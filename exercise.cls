@@ -300,6 +300,9 @@
   \setvarenum\begin{enumerate}}{\end{enumerate}}
 \newenvironment{varcompactenum}{%
   \setvarenum\begin{compactenum}}{\end{compactenum}}
+% some standard enums to use
+\newcommand{\usenumericenum}{\setdefaultenum{\color{maincolor}1.}{\color{maincolor}i.)}{\color{maincolor}a)}{\color{maincolor}A.}}
+\newcommand{\usedefaultenum}{\setdefaultenum{\color{maincolor}a)}{\color{maincolor}1.)}{\color{maincolor}i.}{\color{maincolor}A.}}
 
 % redefine existing list environments to color every item in the maincolor
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
